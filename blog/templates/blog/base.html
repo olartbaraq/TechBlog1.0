@@ -1,0 +1,72 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0a332cb790.js" crossorigin="anonymous"></script>
+    {% if title %}
+    <title>Tech Blog ❤️- {{ title }} </title>
+    {% else %}
+    <title>Tech Blog</title>
+    {% endif %}
+  </head>
+  <body class="bg-gray-800 font-sans leading-normal tracking-normal overflow-x-hidden overflow-y-scroll">
+    <header>
+      <div class="relative grid place-items-center p-5 m-2">
+        <a href="{% url 'Blog-Home-Page'%}"><img src="{% static 'blog/assets/mubbys2-1.png' %}" alt="logo-image" class="w-8 h-8 inset-1/2"></a>
+      </div>
+      <div class="flex justify-between mb-5 mr-10 ml-10">
+        <div class="flex space-x-4 text-slate-50">
+          <a class="text-xs hover:text-red-800" href="{% url 'anime-page' %}">ANIME</a>
+          <a class="text-xs hover:text-red-800" href="{% url 'prog-page' %}">PROGRAMMING</a>
+          <a class="text-xs hover:text-red-800" href="{% url 'gaming-page' %}">GAMING</a>
+          <a class="text-xs hover:text-red-800" href="{% url 'About-Page' %}">ABOUT</a>
+          
+        </div>
+        <div class="flex space-x-3">
+          <a class="stroke-slate-50 -m-1" href="#"><img src="{% static 'blog/assets/post/search.png'%}" alt="search" class="w-5 h-auto"></a>
+          <a class="text-xs text-slate-50 no-underline hover:text-red-800" href="{% url 'Contact-page' %}" target="_blank" >GET IN TOUCH</a>
+        </div>
+      </div>
+    </header>
+    {% block content %}
+
+    {% endblock%}
+
+    <footer>
+      <div class="news-letter m-20 p-5 flex-col space-y-4">
+        <h1 class="text-slate-100 text-3xl mb-14">NEWSLETTER</h1>
+        <div class="flex space-x-24 justify-between">
+          <div class="flex-col space-y-4 justify-center">
+            <p class="text-slate-50 text-xs break-normal text-justify font-normal whitespace-normal mb-8">
+              Are you passionate about programming and always on the looking for ways to learn more, stay up-to-date with the latest developemnts in the field or some gaming news in the game world?
+            </p>
+            <p class="text-slate-50 text-xs break-normal text-justify font-normal whitespace-normal mb-8">
+              If so, our programming and gaming newsletter is the perfect fit for you!
+            </p>
+            <p class="text-slate-50 text-xs break-normal text-justify font-normal whitespace-normal mb-8">
+              With our newsletter, you'll receive regular updates on the hottest topics in the world of programming and gaming, as well as exclusive access to content that you won't find anywhere else.
+            </p>
+          </div>
+          <div class="flex-col space-y-4 justify-center">
+            <p class="text-slate-50 text-xs break-normal text-justify font-normal whitespace-normal mb-8">
+              Plus, our team of expert writers and industry professionals curate each edition to ensure that you're only getting the most valuable and relevant information.
+            </p>
+            <p class="text-slate-50 text-xs break-normal text-justify font-normal whitespace-normal mb-8">
+              Don't miss out- sign up for our newsletter today and take your programming and gaming knowledge to the next level!
+            </p>
+            <div class="flex justify-between rounded-lg border-2 border-solid border-blue-700">
+              <input class="text-slate-50 bg-gray-800 w-80" type="email" name="Register newsletter" placeholder="Email Address">
+              <button class="bg-blue-700 text-slate-50 w-20" type="submit">submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+
+</html>
+

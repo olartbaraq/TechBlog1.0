@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="contact">
+    <div class="flex-col space-y-4 text-slate-100 text-center text-justify p-10 m-10">
+        <h1 class="text-3xl text-yellow-500 text-center">WANT TO GET IN TOUCH?</h1>
+        <p class="text-lg text-yellow-500 text-center">Use this contact form below. We typically reply within 24 hours.</p>
+    </div>
+    <form action="{% url 'Contact-page' %}" method="post">
+            {% csrf_token %}
+        <div class="form bg-gray-200 w-3/4 h-auto rounded-lg border-2 ml-32">
+            <div class="flex-col mb-14 space-y-8 justify-between align-center">
+                <div class="ml-14 mt-14 mr-24 flex space-x-20">
+                    <input class="w-96 h-10 rounded-lg border-2" type="text" name="FirstName" placeholder="First Name*">
+                    <input class="w-96 h-10 rounded-lg border-2" type="text" name="LastName" placeholder="LastName*">
+                </div>
+                <input class="w-10/12 ml-14 h-10 rounded-lg border-2" type="email" name="Email" placeholder="Email*">
+                <textarea class="w-10/12 ml-14 h-72 rounded-lg border-2" name="message" placeholder="Message*" cols="30" rows="10"></textarea>
+            </div>
+            <button class="bg-green-300 ml-14 -mt-4 mb-14 rounded-lg border-2 h-8 w-20" type="submit">SUBMIT</button>
+            <p class="text-green-500 text-center text-lg mb-10"> {{ confirmation }} {{ FirstName }}</p>
+            <p></p>
+        </div>
+    </form>
+</div>
+{% endblock content%}

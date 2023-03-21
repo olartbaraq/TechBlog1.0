@@ -1,0 +1,54 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="about-me text-center flex-col space-y-4 self-center items-center content-center h-full">
+    <h1 class="text-3xl text-slate-50 text-center m-5 p-1"><strong>ABOUT ME</strong></h1>
+    <div class="bio leading-loose text-center">
+      <p class="text-slate-50 break-normal text-justify font-normal whitespace-normal mr-60 ml-60 mb-8">
+        Hi there, I'm the author and designer behind this technical programming and gaming blog, where I will be sharing my passion and interest for all things Web Development. Whether you're a seasoned veteran or a total beginner, I assure you'll find something to love on my blog.
+        I cover a wide range of programming topics from the latest language and frameworks features , to tips and tricks for writing clean and efficient code, I also will share some adventure games genre to relax your mind after work.
+      </p>
+  
+      <p class="text-slate-50 break-normal text-justify font-normal whitespace-normal  mb-12 mr-60 ml-60">
+        When I'm not coding , you can find me tinkering with new technologies, reading up on the latest trends or playing some video games. I'm always on the lookout for new challenges and oppurtunities to learn and grow, and I can't wait to share my journey with you. So come on in, grab a cup of coffee and lets dive into the world of programming together!
+      </p>
+    </div>
+    <div class="flex justify-center mb-16">
+      <img src="{% static 'blog/assets/post/img1.jpg' %}" alt="logo" class="rounded-lg w-96 h-80">
+    </div>
+    <div>
+      <h1 class="text-3xl text-center text-slate-50 mt-16 mb-8">THINGS I LIKE</h1>
+      <div class="flex space-x-3 justify-center mt-10 mb-14">
+        <p class="text-amber-500 font-normal">#Python</p>
+        <p class="text-yellow-200 font-normal">#JavaScript</p>
+        <p class="text-green-700 font-normal">#Django</p>
+        <p class="text-cyan-500 font-normal">#ReactJS</p>
+        <p class="text-sky-700 font-normal">#Gaming</p>
+        <p class="text-red-500 font-normal">#Storytelling</p>
+        <p class="text-purple-500 font-normal">#Anime</p>
+      </div>
+      <div class="bio leading-loose text-center">
+        <p class="text-slate-50 break-normal text-justify font-normal whitespace-normal mr-60 ml-60 mb-8">
+          As a Full Stack Developer, I was always on the look out for the latest and efficient tools to help develop a better experienced web apps. After hours of research and countless experiments, I finally settled on React, TypeScript and Django in my projects.
+          With React, I was able to whip up user interfaces faster than Usain Bolt's 100m sprint race. Typescript on the other hand kept my code clean and error-free, like a freshly-mopped floor.
+          </p>
+    
+        <p class="text-slate-50 break-normal text-justify font-normal whitespace-normal  mb-12 mr-60 ml-60">
+         Django meanwhile allowed me to develop blazing fast web apps and RESTAPIs that were as scalable as a rubber band. It was like having a superpower that let me conquer any project that came my way.
+        </p>
+        <p class="text-slate-50 break-normal text-justify font-normal whitespace-normal  mb-12 mr-60 ml-60">
+          Overall, using React, TypeScript and Django in my developemnt projects made me feel like a superVillian set to devour any obstacle in my way and build the most amazing web applications the world has ever seen.
+         </p>
+      </div>
+      <div class="blog-content items-start align-start text-start ml-20 mb-10 p-5 mt-10">
+        <h1 class="text-slate-100 text-3xl">
+          FROM THE BLOG
+          <div class="blog-news">
+            <p class="text-slate-50"> "[insert blog news]"</p>
+          </div>
+        </h1>
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

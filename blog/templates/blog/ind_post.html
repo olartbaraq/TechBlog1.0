@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="text-center flex-col space-y-4 self-center items-center content-center h-full">
+    <div class="flex-col space-y-4 justify-between">
+        <div class="flex justify-center mt-16 mb-6">
+            <img src="{{ object.image.url }}" alt="logo" class="w-3/4 h-auto rounded-lg">
+        </div>
+        <p class="text-slate-50 text-sm hover:text-red-500">{{ object.title}}</p>
+
+        <div class="flex space-x-80 justify-center align-center">
+            <div class="flex space-x-6 justify-center">
+                <p class="text-slate-50 text-sm"> {{ object.minutes_to_read}} minutes to read </p>
+                
+            </div>
+            <div class="flex space-x-6 justify-center">
+                
+                <p class="text-slate-50 text-sm">  {{ object.date_posted | date:"F d, Y" }} </p>
+            </div>
+        </div>
+        <p class="text-justify text-slate-50 text-sm mb-5 ml-60 mr-60">
+        {{ object.content }}
+        </p>
+        
+       
+    </div>
+</div>
+{% endblock content%}

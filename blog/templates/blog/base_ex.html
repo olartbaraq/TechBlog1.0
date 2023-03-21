@@ -1,0 +1,32 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" type='text/css' href="{% static 'blog/styles/base.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'blog/styles/home.css' %}">
+    <script src="{% static 'blog/scripts/base.js' %}" async></script>
+    
+  </head>
+  <body>
+    <div class="main-header">
+      <div class="header">
+        <div class="logo">
+          <img src="{% static 'blog/assets/logored.png' %}" alt="logo">
+        </div>
+        <div class="navbar">
+          <div class="active-navbar">
+              <a class="home-link" href="#">Home</a>
+              <a onclick="myFunction()" class="article-link" href="#"> Articles</a>
+              <div class="drop-down">
+                <option value="Coding">Coding</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Gaming">Gaming</option>
+              </div>
+              <a class="about-link" href="#">About</a>
+              <a class="contact-link" href="#">Contact</a>
+              <a class="deal-link" href="#">Deals</a>
+          </div>
+        </div>
+      </div>
+    </div>
